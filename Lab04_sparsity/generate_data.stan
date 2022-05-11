@@ -1,8 +1,8 @@
 transformed data {
    int<lower=0> M = 200;
    int<lower=0> N = 100;
-   real alpha;
-   real sigma;
+   real alpha = 3;
+   real sigma = 1;
    real<lower=0, upper=1> sig_prob = 0.05;
 }
 
