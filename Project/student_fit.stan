@@ -25,7 +25,9 @@ model {
 
 generated quantities {
   array[N] real price_pred;
+  array[N] real log_lik;
   for (i in 1:N) {
     price_pred[i] = student_t_rng(nu, mu[i], sigma);
+    log_lik[i] = student_t_lpdf(price[i]|nu, mu[i], sigma);
   }
 }
